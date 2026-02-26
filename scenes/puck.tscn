@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bcxqrya7d2rvh"]
+
+[ext_resource type="Texture2D" uid="uid://bfqpmn61jh6xs" path="res://assets/art/Puck.png" id="1_gj0yh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c1wug"]
+radius = 28.0
+
+[node name="Puck" type="Node2D" unique_id=2014760241]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=78580418]
+texture = ExtResource("1_gj0yh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1756499774]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1395504721]
+shape = SubResource("CircleShape2D_c1wug")

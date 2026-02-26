@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cnjp8cb76quco"]
+
+[ext_resource type="Texture2D" uid="uid://bsosit3baseev" path="res://assets/art/Paddle.png" id="1_3xiby"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7wee"]
+radius = 40.012497
+
+[node name="Paddle" type="Node2D" unique_id=1713690675]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=55839640]
+texture = ExtResource("1_3xiby")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=814178823]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1684672192]
+modulate = Color(1, 0, 1, 1)
+shape = SubResource("CircleShape2D_y7wee")

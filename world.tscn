@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cct8skeci3m5h"]
+
+[ext_resource type="Texture2D" uid="uid://cl1v0sq757qe1" path="res://assets/art/Rink.png" id="1_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://bhqkyowgxrpbi" path="res://assets/art/Boards.png" id="2_tlwt5"]
+
+[node name="World" type="Node2D" unique_id=1288686992]
+
+[node name="Ice" type="Node2D" parent="." unique_id=1534412872]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ice" unique_id=1818143679]
+texture = ExtResource("1_fj7yv")
+
+[node name="Boards" type="Node2D" parent="." unique_id=960056433]
+
+[node name="Sprite2D" type="Sprite2D" parent="Boards" unique_id=803826170]
+texture = ExtResource("2_tlwt5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boards" unique_id=137450366]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boards/StaticBody2D" unique_id=1551045206]
+polygon = PackedVector2Array(-250, -375, -228, -426, -175, -450, 175, -450, 228, -426, 250, -375, 250, 375, 228, 426, 175, 450, -175, 450, -228, 426, -250, 375)
