@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cl1v0sq757qe1" path="res://assets/art/Rink.png" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://bhqkyowgxrpbi" path="res://assets/art/Boards.png" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bcxqrya7d2rvh" path="res://scenes/puck.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://biqxf3r0n8nln" path="res://scenes/player_paddle.tscn" id="4_aqk2v"]
 
 [node name="World" type="Node2D" unique_id=1288686992]
 
@@ -18,4 +20,16 @@ texture = ExtResource("2_tlwt5")
 [node name="StaticBody2D" type="StaticBody2D" parent="Boards" unique_id=137450366]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boards/StaticBody2D" unique_id=1551045206]
+build_mode = 1
 polygon = PackedVector2Array(-250, -375, -228, -426, -175, -450, 175, -450, 228, -426, 250, -375, 250, 375, 228, 426, 175, 450, -175, 450, -228, 426, -250, 375)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1848019472]
+zoom = Vector2(0.6, 0.6)
+
+[node name="ActorsContainer" type="Node2D" parent="." unique_id=368529279]
+
+[node name="Puck" parent="ActorsContainer" unique_id=2014760241 instance=ExtResource("3_tlwt5")]
+position = Vector2(-2, 0)
+
+[node name="PlayerPaddle" parent="ActorsContainer" unique_id=1713690675 instance=ExtResource("4_aqk2v")]
+position = Vector2(0, 301)

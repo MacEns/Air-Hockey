@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://biqxf3r0n8nln"]
+
+[ext_resource type="PackedScene" uid="uid://cnjp8cb76quco" path="res://scenes/paddle.tscn" id="1_yyijc"]
+
+[node name="PlayerPaddle" unique_id=1713690675 instance=ExtResource("1_yyijc")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=55839640]
+modulate = Color(1, 0, 0, 1)
