@@ -3,10 +3,23 @@
 [ext_resource type="Texture2D" uid="uid://bhqkyowgxrpbi" path="res://assets/art/Boards.png" id="1_q6ie0"]
 
 [node name="Boards" type="StaticBody2D" unique_id=1087941528]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2042203265]
-build_mode = 1
-polygon = PackedVector2Array(-250, -375, -228, -426, -175, -450, 175, -450, 228, -426, 250, -375, 250, 375, 228, 426, 175, 450, -175, 450, -228, 426, -250, 375)
+collision_layer = 4
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=503907428]
 texture = ExtResource("1_q6ie0")
+
+[node name="FullOutline" type="CollisionPolygon2D" parent="." unique_id=2092600003]
+build_mode = 1
+polygon = PackedVector2Array(182, -450, -188, -450, -199, -448, -206, -445, -213, -441, -224, -433, -234, -423, -243, -410, -250, -391.6, -250, 386, -245, 403, -240, 414, -233, 424, -224, 433, -211, 442, -197, 448, -182, 450, 184, 450, 204, 445, 221, 435, 232, 425, 238, 417, 244, 407, 247, 399, 250, 387, 250, -386, 247, -400, 241, -412, 230, -427, 221, -435, 209, -443, 197, -448)
+
+[node name="Left Side" type="CollisionPolygon2D" parent="." unique_id=123648918]
+visible = false
+polygon = PackedVector2Array(-60, -450, -188, -450, -199, -448, -206, -445, -213, -441, -224, -433, -234, -423, -243, -410, -250, -391.6, -250, 386, -245, 403, -240, 414, -233, 424, -224, 433, -211, 442, -197, 448, -182, 450, -60, 450, -97, 469, -241, 475, -273, 388, -277, -364, -246, -458, -140, -470)
+disabled = true
+
+[node name="Right Side" type="CollisionPolygon2D" parent="." unique_id=565754928]
+visible = false
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-60, -450, -188, -450, -199, -448, -206, -445, -213, -441, -224, -433, -234, -423, -243, -410, -250, -391.6, -250, 386, -245, 403, -240, 414, -233, 424, -224, 433, -211, 442, -197, 448, -182, 450, -60, 450, -97, 469, -241, 475, -273, 388, -277, -364, -241, -472, -79, -483)
+disabled = true

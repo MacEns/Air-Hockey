@@ -2,11 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://bsosit3baseev" path="res://assets/art/Paddle.png" id="1_3xiby"]
 [ext_resource type="Script" uid="uid://dlj88pulun2cb" path="res://scenes/Paddle.cs" id="1_y7wee"]
+[ext_resource type="PackedScene" uid="uid://cmsdo2d6eqwt6" path="res://scenes/collision_emitter.tscn" id="4_pacq5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7wee"]
-radius = 40.012497
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kvcsl"]
+radius = 40.0
 
 [node name="Paddle" type="CharacterBody2D" unique_id=2070542160]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_y7wee")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=55839640]
@@ -15,3 +21,11 @@ texture = ExtResource("1_3xiby")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1684672192]
 modulate = Color(1, 0, 1, 1)
 shape = SubResource("CircleShape2D_y7wee")
+
+[node name="CollisionEmitter" parent="." unique_id=880578874 instance=ExtResource("4_pacq5")]
+collision_layer = 16
+
+[node name="CollisionShape2D" parent="CollisionEmitter" index="0" unique_id=411190097]
+shape = SubResource("CircleShape2D_kvcsl")
+
+[editable path="CollisionEmitter"]

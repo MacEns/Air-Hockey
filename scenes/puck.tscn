@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dn1x5ebx7kydd" path="res://scenes/Puck.cs" id="1_c1wug"]
 [ext_resource type="Texture2D" uid="uid://bfqpmn61jh6xs" path="res://assets/art/Puck.png" id="1_gj0yh"]
+[ext_resource type="PackedScene" uid="uid://cljtc3juujtu4" path="res://scenes/collision_receiver.tscn" id="3_ctoid"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c1wug"]
 radius = 28.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhkr5"]
+radius = 29.0
+
 [node name="Puck" type="CharacterBody2D" unique_id=1707111656]
+collision_mask = 4
+safe_margin = 1.0
 script = ExtResource("1_c1wug")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=78580418]
@@ -14,3 +20,11 @@ texture = ExtResource("1_gj0yh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1395504721]
 shape = SubResource("CircleShape2D_c1wug")
+
+[node name="CollisionReceiver" parent="." unique_id=644880251 instance=ExtResource("3_ctoid")]
+collision_mask = 16
+
+[node name="CollisionShape2D" parent="CollisionReceiver" index="0" unique_id=842851091]
+shape = SubResource("CircleShape2D_fhkr5")
+
+[editable path="CollisionReceiver"]

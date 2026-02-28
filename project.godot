@@ -15,9 +15,24 @@ run/main_scene="uid://cct8skeci3m5h"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1723
+window/size/viewport_height=1105
+window/size/borderless=true
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Air Hockey"
+
+[layer_names]
+
+2d_physics/layer_1="Puck"
+2d_physics/layer_2="Paddle"
+2d_physics/layer_3="Boards"
+2d_physics/layer_4="Goal Zone"
+2d_physics/layer_5="PaddleCollisionEmitter"
 
 [physics]
 

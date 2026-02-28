@@ -8,7 +8,7 @@
 [node name="World" type="Node2D" unique_id=1288686992]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1848019472]
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(1.12, 1.12)
 
 [node name="Ice" type="Node2D" parent="." unique_id=1534412872]
 
@@ -19,9 +19,22 @@ texture = ExtResource("1_fj7yv")
 
 [node name="ActorsContainer" type="Node2D" parent="." unique_id=368529279]
 
-[node name="Puck" parent="ActorsContainer" unique_id=2014760241 instance=ExtResource("3_tlwt5")]
+[node name="Puck" parent="ActorsContainer" unique_id=2014760241 node_paths=PackedStringArray("blueLine", "greenLine", "redLine") instance=ExtResource("3_tlwt5")]
 position = Vector2(158, 207)
+blueLine = NodePath("../../Blue")
+greenLine = NodePath("../../Green")
+redLine = NodePath("../../Red")
 
 [node name="PlayerPaddle" parent="ActorsContainer" unique_id=1713690675 instance=ExtResource("4_aqk2v")]
 position = Vector2(0, 301)
+collision_mask = 4
 Speed = 250.0
+
+[node name="Green" type="Line2D" parent="." unique_id=1126083769]
+default_color = Color(0, 1, 0, 1)
+
+[node name="Red" type="Line2D" parent="." unique_id=1949824489]
+default_color = Color(1, 0, 0, 1)
+
+[node name="Blue" type="Line2D" parent="." unique_id=1292979075]
+default_color = Color(0, 0, 1, 1)
